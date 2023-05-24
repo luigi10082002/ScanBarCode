@@ -2,8 +2,6 @@ import { registerRootComponent } from 'expo';
 
 import App from './App';
 
-import ScanBarcode from './src/scanbar/index/index';
-
 import index from './src/index/index';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);

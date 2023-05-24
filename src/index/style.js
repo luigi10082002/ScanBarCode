@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { color } from '../components/colors'
+//import { color } from "../../components/colors.js"
 
 export const styles = StyleSheet.create({
 
@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     //justifyContent: 'center',
     width: '100%',
     height: '100%',
-    backgroundColor: color.white
+    backgroundColor: "#E8EEFA"
 
   },
 
@@ -20,15 +20,14 @@ export const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 80,
+    height: '20%',
     width: '100%',
-    backgroundColor: color.blue,
 
   },
 
   headerText: {
 
-    color: color.white,
+    color: "#E8EEFA",
     marginTop: '10%',
     fontSize: 20,
 
@@ -45,7 +44,7 @@ export const styles = StyleSheet.create({
   },
 
   labelQtd: {
-    backgroundColor: color.gray_primary,
+    backgroundColor: "#DCDCDC",
     borderRadius: 5,
     paddingHorizontal: 10,
     height: 50,
@@ -54,7 +53,7 @@ export const styles = StyleSheet.create({
   },
 
   btn: {
-    backgroundColor: color.blue,
+    backgroundColor: "#1151CC",
     justifyContent: "center",
     alignItems: "center",
     width: "90%",
@@ -65,18 +64,18 @@ export const styles = StyleSheet.create({
 
   code: {
 
-    backgroundColor: color.blue,
+    backgroundColor: "#1151CC",
 
   },
 
   noCode: {
 
-    backgroundColor: color.red,
+    backgroundColor: "#E76B09",
 
   },
 
   button: {
-    backgroundColor: color.blue,
+    backgroundColor: "#1151CC",
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
@@ -86,7 +85,7 @@ export const styles = StyleSheet.create({
 
   code: {
 
-    backgroundColor: color.gray,
+    backgroundColor: '#767577',
     justifyContent: "center",
     alignItems: "center",
     marginTop: "5%",
@@ -99,7 +98,7 @@ export const styles = StyleSheet.create({
 
   textCode: {
 
-    color: color.white,
+    color: "#E8EEFA",
     fontSize: 20
 
   }
@@ -107,7 +106,7 @@ export const styles = StyleSheet.create({
 /*  buttonText: {
     fontSize: 16,
     //fontFamily: "Poppins_400Regular",
-    color: color.White
+    color: "#E8EEFA"
   },*/
 
 })
