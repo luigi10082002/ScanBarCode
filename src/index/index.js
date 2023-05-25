@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { BarCodeScanner } from "expo-barcode-scanner";
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { WebView } from 'react-native-webview';
 
 import axios from 'axios';
 
@@ -19,7 +18,6 @@ export default function App() {
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
   const [Url, setUrl] = useState("");
-  const [go, setGo] = useState(false);
 
   useEffect(() => {
     loadSpots();
@@ -40,11 +38,21 @@ export default function App() {
 
   async function handleBarCodeScanned({ data }) {
     setScanned(true);
-    alert(`Url ${Url} and Data CodeBar ${data}`);
+    //alert(`Url ${Url} and Data CodeBar ${data}`);
     
     await AsyncStorage.setItem("@Url", JSON.stringify(Url));
 
-    setGo(true);
+    //Linking.openURL(Url);
+
+    const supported = await Linking.canOpenURL(Url);
+
+    if (supported) {
+      await Linking.openURL(Url);
+    } else {
+      alert('Não é possível abrir o link:', Url);
+    }
+
+    //setGo(true);
 
     //await api.post(Url, data);
 
@@ -56,7 +64,6 @@ export default function App() {
 
   };
   
-  if (go == false) {
   return (
     <View style={styles.container}>
      
@@ -83,13 +90,4 @@ export default function App() {
           </View>
     </View>
   );
-  } else {
-    return (
-
-    <WebView
-        source={{ uri: Url }}
-        style={{ marginTop: 20 }}
-      />
-    );
-  }
 }
