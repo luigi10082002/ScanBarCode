@@ -1,7 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-//import { color } from "../../components/colors.js"
-
 export const styles = StyleSheet.create({
 
   container: {
@@ -36,8 +34,8 @@ export const styles = StyleSheet.create({
   scanner: {
     alignSelf: "center",
     alignItems: "center",
-    height: 200,
-    width: "90%",
+    height: 500,
+    width: 380,
     overflow: "hidden",
     borderRadius: 10,
     marginTop: "5%"
@@ -53,12 +51,13 @@ export const styles = StyleSheet.create({
   },
 
   btn: {
+    position: 'absolute',
     backgroundColor: "#1151CC",
     justifyContent: "center",
     alignItems: "center",
     width: "90%",
     height: 60,
-    marginTop: "5%",
+    marginTop: 430,
     borderRadius: 10,
   },
 
@@ -101,12 +100,11 @@ export const styles = StyleSheet.create({
     color: "#E8EEFA",
     fontSize: 20
 
-  }
+  },
 
-/*  buttonText: {
+  buttonText: {
     fontSize: 16,
-    //fontFamily: "Poppins_400Regular",
-    color: "#E8EEFA"
-  },*/
+    color: "#E8EEFA",
+  },
 
 })
